@@ -5,18 +5,18 @@
   
   <title>微信用户unionID获取策略调整 | Poems Live</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口1https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizati">
+  <meta name="description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizatio">
 <meta name="keywords" content="微信更新,unionID">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信用户unionID获取策略调整">
-<meta property="og:url" content="http://poems.live/2017/12/21/微信用户unionID获取策略调整/index.html">
+<meta property="og:url" content="https://poems.live/2017/12/21/微信用户unionID获取策略调整/index.html">
 <meta property="og:site_name" content="Poems Live">
-<meta property="og:description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口1https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizati">
+<meta property="og:description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizatio">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-12-21T07:48:55.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信用户unionID获取策略调整">
-<meta name="twitter:description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口1https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizati">
+<meta name="twitter:description" content="为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整： 1、微信授权登录功能中的换取access_token接口https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;amp;secret=SECRET&amp;amp;code=CODE&amp;amp;grant_type=authorizatio">
   
   
   
@@ -46,10 +46,10 @@
       </nav>
       <nav id="sub-nav">
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://poems.live"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://poems.live"></form>
       </div>
     </div>
   </div>
@@ -82,12 +82,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>为保护用户隐私，用户unionID需用户主动授权或关注公众号后才可获得，微信公众号接口将做以下调整：</p>
-<h1 id="1、微信授权登录功能中的换取access-token接口"><a href="#1、微信授权登录功能中的换取access-token接口" class="headerlink" title="1、微信授权登录功能中的换取access_token接口"></a>1、微信授权登录功能中的换取access_token接口</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code</div></pre></td></tr></table></figure>
+<h1 id="1、微信授权登录功能中的换取access-token接口"><a href="#1、微信授权登录功能中的换取access-token接口" class="headerlink" title="1、微信授权登录功能中的换取access_token接口"></a>1、微信授权登录功能中的换取access_token接口</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&amp;secret=SECRET&amp;code=CODE&amp;grant_type=authorization_code</div></pre></td></tr></table></figure>
 <p>本接口在scope参数为snsapi_base时不再提供unionID字段。</p>
 <h3 id="调整建议："><a href="#调整建议：" class="headerlink" title="调整建议："></a>调整建议：</h3><p><strong>只需将scope参数修改为snsapi_userinfo即可重新获得用户unionID。</strong></p>
 <p>详情可参考微信授权登录文档</p>
-<h1 id="2、获取用户基本信息接口"><a href="#2、获取用户基本信息接口" class="headerlink" title="2、获取用户基本信息接口"></a>2、获取用户基本信息接口</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN</div></pre></td></tr></table></figure>
+<h1 id="2、获取用户基本信息接口"><a href="#2、获取用户基本信息接口" class="headerlink" title="2、获取用户基本信息接口"></a>2、获取用户基本信息接口</h1><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token=ACCESS_TOKEN</div></pre></td></tr></table></figure>
 <blockquote>
 <p>本接口在用户未关注公众号时，将不返回用户unionID信息。</p>
 </blockquote>
@@ -96,13 +96,12 @@
 <hr>
 <p>详情可参考获取用户基本信息接口文档</p>
 <p>以上变更将在2017年12月31日之前逐步生效，请开发者尽快更新。​</p>
-<p>微信团队
-2017年12月13日</p>
+<p>微信团队<br>2017年12月13日</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://poems.live/2017/12/21/微信用户unionID获取策略调整/" data-id="cjogxneik0006mxrfodq05g1d" class="article-share-link">Share</a>
+      <a data-url="https://poems.live/2017/12/21/微信用户unionID获取策略调整/" data-id="cjogzi9ik0006sgrfg22iryfr" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unionID/">unionID</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信更新/">微信更新</a></li></ul>
@@ -114,7 +113,7 @@
 <nav id="article-nav">
   
     <a href="/2017/12/21/opencv分类器训练/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           opencv分类器训练
@@ -124,7 +123,7 @@
   
   
     <a href="/2017/10/09/QQ音乐API整理/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">QQ音乐API整理</div>
     </a>
   
@@ -141,7 +140,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 Nero<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
